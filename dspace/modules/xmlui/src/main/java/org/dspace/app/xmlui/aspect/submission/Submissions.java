@@ -380,7 +380,8 @@ public class Submissions extends AbstractDSpaceTransformer
         {
             count++;
             //exit loop if we've gone over our limit of submissions to display
-            if(count>limit && !displayAll)
+            // if(count>limit && !displayAll)
+            if(count>limit)
                 break;
 
             Item published = (Item) i.next();
