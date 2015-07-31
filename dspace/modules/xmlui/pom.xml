@@ -62,6 +62,10 @@
                   <overlay>
                      <groupId>org.dspace</groupId>
                      <artifactId>dspace-xmlui</artifactId>
+                     <type>war</type>
+                     <excludes>
+                     	<exclude>WEB-INF/classes/**</exclude>
+                     </excludes>
                   </overlay>
                </overlays>
             </configuration>
