@@ -29,7 +29,7 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
 	
-	<xsl:variable name="page" select="//dri:body/dri:div/@n" />
+	<xsl:variable name="page" select="//variable/page" />
 	<xsl:variable name="base_url" select="//dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']" />
 	<xsl:variable name="base_asset_url"><xsl:value-of select="$base_url" />/themes/Alchemy/lib</xsl:variable>
 	<xsl:variable name="search_url">

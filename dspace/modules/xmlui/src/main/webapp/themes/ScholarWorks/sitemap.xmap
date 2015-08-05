@@ -165,7 +165,7 @@
 				</map:match>
 
 				<!-- Step 3: Fix DRI XML -->
-				<!-- <map:transform src="lib/xsl/util/alchemize.xsl"/> -->
+				<map:transform src="lib/xsl/util/variables.xsl"/>
 
 				<!-- Debuging output -->
 				<map:match type="request" pattern="XML">
