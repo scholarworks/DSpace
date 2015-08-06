@@ -34,6 +34,7 @@
 	
 	<xsl:import href="lib/xsl/includes.xsl" />
 	<xsl:import href="lib/xsl/home.xsl" />
+	<xsl:import href="lib/xsl/results.xsl" />
 			
 	<xsl:output indent="yes" />
 	
