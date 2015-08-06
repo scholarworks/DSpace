@@ -146,7 +146,11 @@
 		
 		<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
   			<div class="container">
-      			<form class="search-query-form clearfix navbar-form" action="http://192.168.1.82:3000/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      			<form class="search-query-form clearfix navbar-form" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                	<xsl:attribute name="action">
+                    	<xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']"/>
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']"/>
+                    </xsl:attribute>
           			<label for="search_field" class="sr-only">Search in</label>
       				<select name="search_field" id="search_field" title="Targeted search options" class="search_field form-control">
       					<option value="all_fields">All Fields</option>
