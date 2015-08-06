@@ -112,41 +112,37 @@
 		<xsl:variable name="home" select="//dri:pageMeta/dri:metadata[@element='contextPath']" />
 		<xsl:variable name="login" select="//dri:userMeta/dri:metadata[@element='loginURL']" />
 	
-		<div class="navbar navbar-default" role="navigation">
+		<div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="{$home}">
-						Institutional Repository
-					</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li class="navbar-search-area">
-							<xsl:if test="not($page = 'search')">
-								<form action="{$search_url}" method="get" class="navbar-form" role="form">
-									<div class="form-group">
-										<input type="text" placeholder="Search" name="query" class="form-control" id="navbar-search" />
-									</div>
-									<button type="submit" class="btn btn-search">
-										<i class="fa fa-search">&nbsp;</i>
-									</button>
-								</form>
-							</xsl:if>						
-						</li>
-					</ul>
-					
-					<xsl:call-template name="login" />
+    			<div class="navbar-header">
+    				<button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
+      					<span class="sr-only">Toggle navigation</span>
+      					<span class="icon-bar"></span>
+      					<span class="icon-bar"></span>
+      					<span class="icon-bar"></span>
+    				</button>
+    				<a class="navbar-brand" href="/">Blacklight</a>
+    			</div>
 
-				</div>
-			</div>
+    			<div class="collapse navbar-collapse" id="user-util-collapse">
+      				<div class="navbar-right">
+  						<ul class="nav navbar-nav">    
+      						<li><a id="bookmarks_nav" href="/bookmarks">
+  								Bookmarks (<span data-role='bookmark-counter'>0</span>)
+							</a></li>
+
+      						<li><a href="/search_history">History</a></li>
+  						</ul>
+
+    					<ul class="nav navbar-nav">
+      						<li>
+        						<a href="/users/sign_in">Login</a>
+      						</li>
+      					</ul>
+					</div>
+    			</div>
+  			</div>
 		</div>	
-	
 	</xsl:template>
 	
 	<xsl:template name="footer" />
