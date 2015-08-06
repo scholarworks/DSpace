@@ -91,7 +91,12 @@
 		<body>
 		
 			<xsl:call-template name="header" />
-			
+
+			<xsl:choose>			
+				<xsl:when test="$page = 'search'">
+					<xsl:call-template name="search_results" />
+				</xsl:when>
+			</xsl:choose>
 			
 			<xsl:call-template name="footer" />
 			
