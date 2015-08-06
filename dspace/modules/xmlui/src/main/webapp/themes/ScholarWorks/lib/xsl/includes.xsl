@@ -142,7 +142,33 @@
 					</div>
     			</div>
   			</div>
-		</div>	
+		</div>
+		
+		<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+  			<div class="container">
+      			<form class="search-query-form clearfix navbar-form" action="http://192.168.1.82:3000/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          			<label for="search_field" class="sr-only">Search in</label>
+      				<select name="search_field" id="search_field" title="Targeted search options" class="search_field form-control">
+      					<option value="all_fields">All Fields</option>
+						<option value="title">Title</option>
+						<option value="author">Author</option>
+						<option value="subject">Subject</option>
+					</select>
+      				<span class="sr-only">for</span>
+    				<div class="input-group search-input-group">
+        				<label for="q" class="sr-only">search for</label>
+         				<input type="text" name="q" id="q" placeholder="Search..." class="search_q q form-control" autofocus="autofocus" />
+						<span class="input-group-btn">
+        					<button type="submit" class="btn btn-primary search-btn" id="search">
+          						<span class="submit-search-text">Search</span>
+          						<span class="glyphicon glyphicon-search"></span>
+        					</button>
+        				</span>
+      				</div>
+				</form>
+  			</div>
+		</div>
+			
 	</xsl:template>
 	
 	<xsl:template name="footer" />
