@@ -99,6 +99,9 @@
 				<xsl:when test="$page = 'search'">
 					<xsl:call-template name="search_results" />
 				</xsl:when>
+				<xsl:when test="$page = 'comunity-browser'">
+						<xsl:call-template name="community_list" />
+				</xsl:when>
 			</xsl:choose>
 			
 			<xsl:call-template name="footer" />
