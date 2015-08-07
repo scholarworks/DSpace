@@ -14,7 +14,8 @@
 
 <!--
 
-    ScholarWorks THEME
+    ALCHEMY THEME
+	community list
 
 -->
 
@@ -29,14 +30,31 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc">
+
+    <xsl:output indent="yes"/>
 	
-	<xsl:import href="../Mirage/Mirage.xsl" />
+	<xsl:template name="community_list">
 	
-	<xsl:import href="lib/xsl/includes.xsl" />
-	<xsl:import href="lib/xsl/home.xsl" />
-	<xsl:import href="lib/xsl/community-list.xsl" />
-	<xsl:import href="lib/xsl/results.xsl" />
-			
-	<xsl:output indent="yes" />
+		<h1><i18n:text catalogue="default">xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text></h1>
+		
+		<ul class="community-browser">
+			<xsl:for-each select="variable/communities/community">
+				<li>
+					<a href="{mets:METS/@OBJID}">
+						<xsl:value-of select="mets:METS//dim:field[@mdschema='dc' and @element='title']" />
+					</a>
+					<ul>
+						<xsl:for-each select="collections//dim:dim">
+							<li>
+								<a href="{../../../../@OBJID}"><xsl:value-of select="dim:field[@mdschema='dc' and @element='title']" /></a>
+							</li>
+						</xsl:for-each>
+					</ul>
+					
+				</li>
+			</xsl:for-each>
+		</ul>
+	
+	</xsl:template>
 	
 </xsl:stylesheet>

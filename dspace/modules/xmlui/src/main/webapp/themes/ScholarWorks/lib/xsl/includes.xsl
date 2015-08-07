@@ -93,6 +93,9 @@
 			<xsl:call-template name="header" />
 
 			<xsl:choose>			
+				<xsl:when test="$page = 'news'">
+					<xsl:call-template name="home_page" />
+				</xsl:when>
 				<xsl:when test="$page = 'search'">
 					<xsl:call-template name="search_results" />
 				</xsl:when>
