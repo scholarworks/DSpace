@@ -35,7 +35,7 @@
 	
 	<xsl:template name="community">
 	
-		<xsl:for-each select="alchemy/communities/community">
+		<xsl:for-each select="variable/communities/community">
 		
 			<h1><xsl:value-of select="mets:METS//dim:dim/dim:field[@mdschema='dc' and @element='title']" /></h1>
 			
