@@ -37,6 +37,8 @@
 	
 		<h1><i18n:text catalogue="default">xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text></h1>
 		
+		HERE
+		
 		<ul class="community-browser">
 			<xsl:for-each select="variable/communities/community">
 				<li>
