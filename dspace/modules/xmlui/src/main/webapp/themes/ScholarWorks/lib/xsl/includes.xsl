@@ -102,6 +102,9 @@
 				<xsl:when test="$page = 'comunity-browser'">
 						<xsl:call-template name="community_list" />
 				</xsl:when>
+				<xsl:when test="$page = 'community-home'">
+						<xsl:call-template name="community" />
+				</xsl:when>
 			</xsl:choose>
 			
 			<xsl:call-template name="footer" />
