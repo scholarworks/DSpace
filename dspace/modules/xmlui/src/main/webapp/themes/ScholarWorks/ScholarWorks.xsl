@@ -36,6 +36,7 @@
 	<xsl:import href="lib/xsl/home.xsl" />
 	<xsl:import href="lib/xsl/community-list.xsl" />
 	<xsl:import href="lib/xsl/community.xsl" />
+	<xsl:import href="lib/xsl/collection.xsl" />
 	<xsl:import href="lib/xsl/results.xsl" />
 			
 	<xsl:output indent="yes" />
