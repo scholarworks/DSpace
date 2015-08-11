@@ -60,7 +60,7 @@
 							
 							<xsl:call-template name="facets_remove" />
 							
-							<xsl:if test="not(alchemy/results)">
+							<xsl:if test="not(variable/results)">
 								<div class="no-results">
 									<i18n:text catalogue="default">xmlui.ArtifactBrowser.AbstractSearch.no_results</i18n:text>
 								</div>
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 			
-			<xsl:if test="alchemy/results">
+			<xsl:if test="variable/results">
 				
 				<div class="search-results-area">
 				
