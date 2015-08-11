@@ -282,6 +282,7 @@
 			</div>
 		</div>
 		
+		<!-- 
 		<xsl:for-each select="//dri:options/dri:list[@n='browse']/dri:list[@n='global']">		
 			<ul>
 				<xsl:for-each select="dri:item/dri:xref">
@@ -303,7 +304,7 @@
 			</xsl:for-each>
 			
 		</xsl:if>
-	
+		-->
 	</xsl:template>
 
 	<xsl:template name="admin">
