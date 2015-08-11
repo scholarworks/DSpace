@@ -74,9 +74,9 @@
 		<xsl:variable name="previous_page" select="alchemy/results/previousPage" />
 		<xsl:variable name="next_page" select="alchemy/results/nextPage" />
 		
-		<xsl:variable name="start" select="alchemy/results/start" />
-		<xsl:variable name="end" select="alchemy/results/end" />
-		<xsl:variable name="total" select="alchemy/results/total" />
+		<xsl:variable name="start" select="variable/results/start" />
+		<xsl:variable name="end" select="variable/results/end" />
+		<xsl:variable name="total" select="variable/results/total" />
 		
 		<xsl:if test="variable/results/start">
 		
