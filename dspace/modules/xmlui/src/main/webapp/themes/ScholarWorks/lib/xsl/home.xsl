@@ -41,9 +41,10 @@
 				
 			<div class="row">
 			
+					<xsl:call-template name="browser" />
+
 				<div class="col-sm-4">
 				
-					<xsl:call-template name="browser" />
 					
 					<h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text></h2>
 					

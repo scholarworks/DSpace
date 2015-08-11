@@ -275,7 +275,14 @@
   				<div id="facet-format" class="panel-collapse facet-content collapse">
     				<div class="panel-body">
       					<ul class="facet-values list-unstyled">
-  							<li><span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Book">Book</a></span><span class="facet-count">9,737</span></li><li><span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Unknown">Unknown</a></span><span class="facet-count">88</span></li>
+  							<li>
+  								<span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Book">Book</a></span>
+  								<span class="facet-count">9,737</span>
+  							</li>
+  							<li>
+  								<span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Unknown">Unknown</a></span>
+  								<span class="facet-count">88</span>
+  							</li>
 						</ul>
     				</div>
   				</div>
