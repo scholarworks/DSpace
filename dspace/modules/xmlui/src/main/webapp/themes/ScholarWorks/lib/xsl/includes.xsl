@@ -263,7 +263,24 @@
 
 	<xsl:template name="browser">
 	
-		<h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.Navigation.head_browse</i18n:text></h2>
+		<!-- <h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.Navigation.head_browse</i18n:text></h2> -->
+		
+  		<div id="facet-panel-collapse" class="collapse panel-group">
+  			<div class="panel panel-default facet_limit blacklight-format ">
+  				<div class="collapsed collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-format">
+    				<h5 class="panel-title facet-field-heading">
+      					<a data-no-turbolink="true" href="#">Format</a>
+    				</h5>
+  				</div>
+  				<div id="facet-format" class="panel-collapse facet-content collapse">
+    				<div class="panel-body">
+      					<ul class="facet-values list-unstyled">
+  							<li><span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Book">Book</a></span><span class="facet-count">9,737</span></li><li><span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Unknown">Unknown</a></span><span class="facet-count">88</span></li>
+						</ul>
+    				</div>
+  				</div>
+			</div>
+		</div>
 		
 		<xsl:for-each select="//dri:options/dri:list[@n='browse']/dri:list[@n='global']">		
 			<ul>
