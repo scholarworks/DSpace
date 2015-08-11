@@ -108,6 +108,9 @@
 				<xsl:when test="$page = 'collection-home'">
 						<xsl:call-template name="collection" />
 				</xsl:when>
+				<xsl:when test="$page = 'item-view'">
+					<xsl:call-template name="item_view" />
+				</xsl:when>
 			</xsl:choose>
 			
 			<xsl:call-template name="footer" />
