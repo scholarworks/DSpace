@@ -323,7 +323,7 @@
 	<xsl:template name="brief_results">
 	
 		<ul class="brief-results">
-			<xsl:for-each select="alchemy/results/mets:METS">
+			<xsl:for-each select="variable/results/mets:METS">
 				<li>
 					<xsl:call-template name="small_type_icon" />		
 					<a href="{@OBJID}">
