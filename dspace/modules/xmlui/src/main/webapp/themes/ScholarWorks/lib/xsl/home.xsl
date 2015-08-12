@@ -49,7 +49,7 @@
 					<h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text></h2>
 					
 					<ul>
-						<xsl:for-each select="alchemy/communities/community/mets:METS">
+						<xsl:for-each select="variable/communities/community/mets:METS">
 							<li>
 								<xsl:variable name="url">
 									<xsl:text>handle/</xsl:text>
