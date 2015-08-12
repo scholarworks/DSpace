@@ -216,6 +216,114 @@ it, please enter the types and the actual numbers or codes below.</hint>
        </field>
       </page>
     </form>
+    
+    <form name="la_exhibit_140044">
+        <page number="1">
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>title</dc-element>
+                <label>Title</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+            </field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>contributor</dc-element>
+                <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                <label>Contributor</label>
+                <input-type value-pairs-name="contributor_types">qualdrop_value</input-type>
+                <hint></hint>
+                <required></required>
+			</field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>contributor</dc-element>
+                <dc-qualifier>other</dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                <label>Interviewer</label>
+                <input-type value-pairs-name="interviewer_types">qualdrop_value</input-type>
+                <hint></hint>
+                <required></required>
+			</field>
+             <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>date</dc-element>
+                <dc-qualifier>created</dc-qualifier>
+                <label>Digital Date</label>
+                <input-type>onebox</input-type>
+                <hint>Enter date as YYYY-MM-DD format, e.g. 2014-12-08</hint>
+            </field>
+			<field>
+				<dc-schema>dc</dc-schema>
+                <dc-element>type</dc-element>
+                <dc-qualifier></dc-qualifier>
+                <repeatable>true</repeatable>
+                <label>Type</label>
+                <input-type value-pairs-name="common_int_types">dropdown</input-type>
+                <hint>Select the type(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
+                <required></required>
+			</field>
+			<field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>format</dc-element>
+                <label>Format</label>
+                <input-type value-pairs-name="common_formats">dropdown</input-type>
+                <hint></hint>
+            </field>
+           <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>language</dc-element>
+                <label>Language</label>
+                <input-type value-pairs-name="la_ca_languages">dropdown</input-type>
+                <hint></hint>
+            </field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>subject</dc-element>
+                <dc-qualifier></dc-qualifier>
+                <label>Subject Keywords</label>
+                <input-type value-pairs-name="la_ca_subjects">dropdown</input-type>
+                <hint> Select the appropriate subject keywords or phrases. </hint>
+            </field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>description</dc-element>
+                <dc-qualifier></dc-qualifier>
+                <label>Description</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+            </field>
+
+             <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>identifier</dc-element>
+                <dc-qualifier></dc-qualifier>
+                <label>Identifier</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+            </field>
+			<field>
+				<dc-schema>dc</dc-schema>
+				<dc-element>format</dc-element>
+				<dc-qualifier>technicalinfo</dc-qualifier>
+				<label>Technical Info</label>
+				<input-type>onebox</input-type>
+				<hint>(Frame Width, Frame Height, Total Bitrate, Frame Rate, Channels, and Audio Sample Rate)</hint>
+			</field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>rights</dc-element>
+                <dc-qualifier></dc-qualifier>
+                <label>Rights</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+            </field> 
+        </page>
+    </form>
+    
  </form-definitions>
 
 
@@ -396,6 +504,626 @@ it, please enter the types and the actual numbers or codes below.</hint>
        <stored-value>other</stored-value>
      </pair>
    </value-pairs>
+
+		<value-pairs value-pairs-name="contributor_types" dc-term="contributor">
+            <pair>
+                <displayed-value>Interviewee</displayed-value>
+                <stored-value>Interviewee</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Narrator</displayed-value>
+                <stored-value>Narrator</stored-value>
+            </pair>
+        </value-pairs>
+
+		<value-pairs value-pairs-name="interviewer_types" dc-term="interviewer">
+            <pair>
+                <displayed-value>Interviewer</displayed-value>
+                <stored-value>Interviewer</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Transcriptionist</displayed-value>
+                <stored-value>Transcriptionist</stored-value>
+            </pair>
+        </value-pairs>
+
+		<value-pairs value-pairs-name="common_int_types" dc-term="interviews">
+            <pair>
+                <displayed-value>Interview Session</displayed-value>
+                <stored-value>Interview Session</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Field Notes</displayed-value>
+                <stored-value>Field Notes</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Transcript</displayed-value>
+                <stored-value>Transcript</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Picture / Photo</displayed-value>
+                <stored-value>Picture / Photo</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Video</displayed-value>
+                <stored-value>Video</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Analog</displayed-value>
+                <stored-value>Analog</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Digital</displayed-value>
+                <stored-value>Digital</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Web</displayed-value>
+                <stored-value>Web</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Book</displayed-value>
+                <stored-value>Book</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Book</displayed-value>
+                <stored-value>Book</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Article</displayed-value>
+                <stored-value>Article</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Dataset</displayed-value>
+                <stored-value>Dataset</stored-value>
+            </pair>
+        </value-pairs>
+
+		<value-pairs value-pairs-name="common_formats" dc-term="formats">
+            <pair>
+                <displayed-value>WAV</displayed-value>
+                <stored-value>WAV</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>DOCX</displayed-value>
+                <stored-value>DOCX</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>XLSX</displayed-value>
+                <stored-value>XLSX</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>PDF</displayed-value>
+                <stored-value>PDF</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>JPG</displayed-value>
+                <stored-value>JPG</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MP3</displayed-value>
+                <stored-value>MP3</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>WMV</displayed-value>
+                <stored-value>WMV</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>TIF</displayed-value>
+                <stored-value>TIF</stored-value>
+            </pair>
+        </value-pairs>
+	<value-pairs value-pairs-name="la_ca_languages" dc-term="language">
+	<pair>
+		<displayed-value>Mandarin</displayed-value>
+		<stored-value>Mandarin</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Cantonese</displayed-value>	
+		<stored-value>Cantonese</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>English</displayed-value>	
+		<stored-value>English</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Toishan</displayed-value>	
+		<stored-value>Toishan</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>SzeYup</displayed-value>	
+		<stored-value>SzeYup</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Hakka</displayed-value>
+		<stored-value>Hakka</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Fukien</displayed-value>
+		<stored-value>Fukien</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Shanghainese</displayed-value>	
+		<stored-value>Shanghainese</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Taiwanese</displayed-value>	
+		<stored-value>Taiwanese</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Vietnamese</displayed-value>	
+		<stored-value>Vietnamese</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Spanish</displayed-value>	
+		<stored-value>Spanish</stored-value>	
+	</pair>
+	<pair>
+		<displayed-value>Tagalog or other Pilipino</displayed-value> 
+		<stored-value>Tagalog or other Pilipino</stored-value> 
+	</pair>
+	</value-pairs>
+	<value-pairs value-pairs-name="la_ca_subjects" dc-terms="subjects">
+	<pair>
+		<displayed-value>Immigration -- Chinese Exclusion Act</displayed-value>
+		<stored-value>Immigration -- Chinese Exclusion Act</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Amnesty</displayed-value>
+		<stored-value>Immigration -- Amnesty</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Confession</displayed-value>
+		<stored-value>Immigration -- Confession</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Angel Island</displayed-value>
+		<stored-value>Immigration -- Angel Island</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Paper son</displayed-value>
+		<stored-value>Immigration -- Paper son</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Immigration Act of 1965</displayed-value>
+		<stored-value>Immigration -- Immigration Act of 1965</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Citizenship</displayed-value>
+		<stored-value>Immigration -- Citizenship</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Green card</displayed-value>
+		<stored-value>Immigration -- Green card</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Enlist</displayed-value>
+		<stored-value>Immigration -- Enlist</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Interrogation</displayed-value>
+		<stored-value>Immigration -- Interrogation</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Gold mountain</displayed-value>
+		<stored-value>Immigration -- Gold mountain</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Gum Shan</displayed-value>
+		<stored-value>Immigration -- Gum Shan</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Immigration -- Detention</displayed-value>
+		<stored-value>Immigration -- Detention</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Asian-American movement</displayed-value>
+		<stored-value>Social/Political -- Asian-American movement</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Chiang Kai-Shek</displayed-value>
+		<stored-value>Social/Political -- Chiang Kai-Shek</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- China</displayed-value>
+		<stored-value>Social/Political -- China</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Communism</displayed-value>
+		<stored-value>Social/Political -- Communism</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Cultural revolution</displayed-value>
+		<stored-value>Social/Political -- Cultural revolution</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Discrimination</displayed-value>
+		<stored-value>Social/Political -- Discrimination</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Identity</displayed-value>
+		<stored-value>Social/Political -- Identity</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Japanese</displayed-value>
+		<stored-value>Social/Political -- Japanese</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Korean War</displayed-value>
+		<stored-value>Social/Political -- Korean War</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Kuomintang</displayed-value>
+		<stored-value>Social/Political -- Kuomintang</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Mao Tse-Tung</displayed-value>
+		<stored-value>Social/Political -- Mao Tse-Tung</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Peasant</displayed-value>
+		<stored-value>Social/Political -- Peasant</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- People's Republic of China</displayed-value>
+		<stored-value>Social/Political -- People's Republic of China</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Racism</displayed-value>
+		<stored-value>Social/Political -- Racism</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Revolution</displayed-value>
+		<stored-value>Social/Political -- Revolution</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Sun Yat Sen</displayed-value>
+		<stored-value>Social/Political -- Sun Yat Sen</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Taiwan</displayed-value>
+		<stored-value>Social/Political -- Taiwan</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- World War II</displayed-value>
+		<stored-value>Social/Political -- World War II</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Gangs</displayed-value>
+		<stored-value>Social/Political -- Gangs</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Opium</displayed-value>
+		<stored-value>Social/Political -- Opium</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Social/Political -- Missionary</displayed-value>
+		<stored-value>Social/Political -- Missionary</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- College degree</displayed-value>
+		<stored-value>Education -- College degree</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Graduation</displayed-value>
+		<stored-value>Education -- Graduation</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Ivy League</displayed-value>
+		<stored-value>Education -- Ivy League</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Med school</displayed-value>
+		<stored-value>Education -- Med school</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Law school</displayed-value>
+		<stored-value>Education -- Law school</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Professional</displayed-value>
+		<stored-value>Education -- Professional</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Education -- Chinese school</displayed-value>
+		<stored-value>Education -- Chinese school</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Actor</displayed-value>
+		<stored-value>Work, Job -- Actor</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Architect</displayed-value>
+		<stored-value>Work, Job -- Architect</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Banker</displayed-value>
+		<stored-value>Work, Job -- Banker</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Business owner</displayed-value>
+		<stored-value>Work, Job -- Business owner</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Civil service</displayed-value>
+		<stored-value>Work, Job -- Civil service</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Dentist</displayed-value>
+		<stored-value>Work, Job -- Dentist</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Engineer</displayed-value>
+		<stored-value>Work, Job -- Engineer</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Entertainment</displayed-value>
+		<stored-value>Work, Job -- Entertainment</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Farmer</displayed-value>
+		<stored-value>Work, Job -- Farmer</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Garmet factory</displayed-value>
+		<stored-value>Work, Job -- Garmet factory</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Gift shop</displayed-value>
+		<stored-value>Work, Job -- Gift shop</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Grocery store</displayed-value>
+		<stored-value>Work, Job -- Grocery store</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Hollywood</displayed-value>
+		<stored-value>Work, Job -- Hollywood</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Insurance agent</displayed-value>
+		<stored-value>Work, Job -- Insurance agent</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Investment broker</displayed-value>
+		<stored-value>Work, Job -- Investment broker</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Laborer</displayed-value>
+		<stored-value>Work, Job -- Laborer</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Laundry</displayed-value>
+		<stored-value>Work, Job -- Laundry</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Lawyer</displayed-value>
+		<stored-value>Work, Job -- Lawyer</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Liquor store</displayed-value>
+		<stored-value>Work, Job -- Liquor store</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Medical</displayed-value>
+		<stored-value>Work, Job -- Medical</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Nurse</displayed-value>
+		<stored-value>Work, Job -- Nurse</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Pharmacist</displayed-value>
+		<stored-value>Work, Job -- Pharmacist</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Physician</displayed-value>
+		<stored-value>Work, Job -- Physician</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Railroad</displayed-value>
+		<stored-value>Work, Job -- Railroad</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Real estate</displayed-value>
+		<stored-value>Work, Job -- Real estate</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Restaurant worker</displayed-value>
+		<stored-value>Work, Job -- Restaurant worker</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Scientist</displayed-value>
+		<stored-value>Work, Job -- Scientist</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Seamstress</displayed-value>
+		<stored-value>Work, Job -- Seamstress</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Social worker</displayed-value>
+		<stored-value>Work, Job -- Social worker</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Surgeon</displayed-value>
+		<stored-value>Work, Job -- Surgeon</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Teacher</displayed-value>
+		<stored-value>Work, Job -- Teacher</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Work, Job -- Writer</displayed-value>
+		<stored-value>Work, Job -- Writer</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Los Angeles</displayed-value>
+		<stored-value>Names of Places -- California -- Los Angeles</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- San Francisco</displayed-value>
+		<stored-value>Names of Places -- California -- San Francisco</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Orange County</displayed-value>
+		<stored-value>Names of Places -- California -- Orange County</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Chinatown</displayed-value>
+		<stored-value>Names of Places -- California -- Chinatown</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Monterey Park</displayed-value>
+		<stored-value>Names of Places -- California -- Monterey Park</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Alhambra</displayed-value>
+		<stored-value>Names of Places -- California -- Alhambra</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- San Gabriel Valley</displayed-value>
+		<stored-value>Names of Places -- California -- San Gabriel Valley</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- San Fernando Valley</displayed-value>
+		<stored-value>Names of Places -- California -- San Fernando Valley</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Stockton</displayed-value>
+		<stored-value>Names of Places -- California -- Stockton</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Oakland</displayed-value>
+		<stored-value>Names of Places -- California -- Oakland</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Sacramento</displayed-value>
+		<stored-value>Names of Places -- California -- Sacramento</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- California -- Little Tokyo, Los Angeles</displayed-value>
+		<stored-value>Names of Places -- California -- Little Tokyo, Los Angeles</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Guangdong</displayed-value>
+		<stored-value>Names of Places -- China -- Guangdong</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Canton</displayed-value>
+		<stored-value>Names of Places -- China -- Canton</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Hong Kong</displayed-value>
+		<stored-value>Names of Places -- China -- Hong Kong</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Toisan</displayed-value>
+		<stored-value>Names of Places -- China -- Toisan</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Hoi Ping</displayed-value>
+		<stored-value>Names of Places -- China -- Hoi Ping</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- San Hui</displayed-value>
+		<stored-value>Names of Places -- China -- San Hui</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Names of Places -- China -- Pearl River</displayed-value>
+		<stored-value>Names of Places -- China -- Pearl River</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Acupuncture</displayed-value>
+		<stored-value>Family, culture -- Acupuncture</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Ancestors</displayed-value>
+		<stored-value>Family, culture -- Ancestors</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Arranged marriage</displayed-value>
+		<stored-value>Family, culture -- Arranged marriage</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Bound feet</displayed-value>
+		<stored-value>Family, culture -- Bound feet</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Buddhism</displayed-value>
+		<stored-value>Family, culture -- Buddhism</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Chinese New Year</displayed-value>
+		<stored-value>Family, culture -- Chinese New Year</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Christian</displayed-value>
+		<stored-value>Family, culture -- Christian</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Church</displayed-value>
+		<stored-value>Family, culture -- Church</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Confucian</displayed-value>
+		<stored-value>Family, culture -- Confucian</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Customs</displayed-value>
+		<stored-value>Family, culture -- Customs</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Elderly</displayed-value>
+		<stored-value>Family, culture -- Elderly</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Festival</displayed-value>
+		<stored-value>Family, culture -- Festival</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Filial piety</displayed-value>
+		<stored-value>Family, culture -- Filial piety</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Ghosts</displayed-value>
+		<stored-value>Family, culture -- Ghosts</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Gold</displayed-value>
+		<stored-value>Family, culture -- Gold</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Herbs</displayed-value>
+		<stored-value>Family, culture -- Herbs</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Jade</displayed-value>
+		<stored-value>Family, culture -- Jade</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Qing Ming</displayed-value>
+		<stored-value>Family, culture -- Qing Ming</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Red envelope</displayed-value>
+		<stored-value>Family, culture -- Red envelope</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Relatives</displayed-value>
+		<stored-value>Family, culture -- Relatives</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Religion</displayed-value>
+		<stored-value>Family, culture -- Religion</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Superstition</displayed-value>
+		<stored-value>Family, culture -- Superstition</stored-value>
+	</pair>
+	<pair>
+		<displayed-value>Family, culture -- Village</displayed-value>
+		<stored-value>Family, culture -- Village</stored-value>
+	</pair>
+	</value-pairs>	
 
     </form-value-pairs>
 
