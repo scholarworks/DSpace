@@ -266,14 +266,14 @@
 	
 		<!-- <h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.Navigation.head_browse</i18n:text></h2> -->
 		
-  		<div id="facet-panel-collapse" class="collapse panel-group">
+  		<div id="facet-panel-collapse" class="panel-group">
   			<div class="panel panel-default facet_limit blacklight-format ">
-  				<div class="collapsed collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-format">
+  				<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
     				<h5 class="panel-title facet-field-heading">
       					<a data-no-turbolink="true" href="#">Format</a>
     				</h5>
   				</div>
-  				<div id="facet-format" class="panel-collapse facet-content collapse">
+  				<div id="facet-format" class="panel-collapse facet-content">
     				<div class="panel-body">
       					<ul class="facet-values list-unstyled">
   							<li>
