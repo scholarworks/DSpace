@@ -32,6 +32,7 @@
 	
 	<xsl:import href="../Mirage/Mirage.xsl" />
 	
+	<xsl:import href="../dri2xhtml-alt/dri2xhtml.xsl"/>
 	<xsl:import href="lib/xsl/includes.xsl" />
 	<xsl:import href="lib/xsl/home.xsl" />
 	<xsl:import href="lib/xsl/community-list.xsl" />
