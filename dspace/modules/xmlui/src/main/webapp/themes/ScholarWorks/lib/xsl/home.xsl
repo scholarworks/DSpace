@@ -41,10 +41,22 @@
 				
 			<div class="row">
 			
-					<xsl:call-template name="browser" />
 
 				<div class="col-sm-4">
 				
+					<xsl:call-template name="browser" />
+					
+				
+				</div>
+				<div class="col-sm-8">
+					
+					<h2>About Our Institutional Repository</h2>
+					
+					<p>
+						DSpace is a digital service that collects, preserves, and distributes digital material. 
+						Repositories are important tools for preserving an organization's legacy; they facilitate 
+						digital preservation and scholarly communication.
+					</p>
 					
 					<h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.CommunityBrowser.head</i18n:text></h2>
 					
@@ -62,18 +74,7 @@
 							</li>
 						</xsl:for-each>
 					</ul>
-				
-				</div>
-				<div class="col-sm-8">
-					
-					<h2>About Our Institutional Repository</h2>
-					
-					<p>
-						DSpace is a digital service that collects, preserves, and distributes digital material. 
-						Repositories are important tools for preserving an organization's legacy; they facilitate 
-						digital preservation and scholarly communication.
-					</p>
-					
+
 					<h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions</i18n:text></h2>
 					
 					<div class="results">
