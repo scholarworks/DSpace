@@ -79,7 +79,7 @@
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="{$base_asset_url}/css/alchemy.css" rel="stylesheet" />
-		<script src="{$base_asset_url}/js/jQuery.js"></script>
+
 		<xsl:call-template name="local_css" />
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
