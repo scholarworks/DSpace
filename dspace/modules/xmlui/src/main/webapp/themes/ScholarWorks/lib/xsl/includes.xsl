@@ -268,7 +268,7 @@
 		
 		<!-- <xsl:apply-templates /> -->
 		
-		<xsl:for-each select="variable/facets">
+		<xsl:for-each select="variable/facets/facet">
 			HERE 123
 		</xsl:for-each>
 
