@@ -275,9 +275,10 @@
 		</xsl:for-each>
 
 		<xsl:for-each select="dri:options/dri:list[@n='discovery']/dri:list">
+			<xsl:variable name="facet" select="dri:head/i18n:text" />
   			<div id="facet-panel-collapse" class="collapse panel-group">
   				<div class="panel panel-default facet_limit blacklight-format ">
-  					<div class="collapsed collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-format">
+  					<div class="collapsed collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-$facet">
     					<h5 class="panel-title facet-field-heading"><i18n:text><xsl:value-of select="dri:head/i18n:text" /></i18n:text></h5>
 	  				</div>
 	  				<div id="facet-format" class="panel-collapse facet-content collapse">
