@@ -282,7 +282,7 @@
   				<div id="facet-format" class="panel-collapse facet-content">
     				<div class="panel-body">
       					<ul class="facet-values list-unstyled">
-							<xsl:for-each select="dri:options/dri:list[@n='discovery']/dri:list/dir:item">
+							<xsl:for-each select="dir:item">
   								<li><span class="facet-label"><a class="facet_select" href=""><i18n:text><xsl:value-of select="dri:xref/i18n:text" /></i18n:text></a></span></li>
   							</xsl:for-each>
 						</ul>
