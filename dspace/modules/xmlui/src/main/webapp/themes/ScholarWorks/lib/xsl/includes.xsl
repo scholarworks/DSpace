@@ -266,7 +266,7 @@
 	
 		<!-- <h2><i18n:text catalogue="default">xmlui.ArtifactBrowser.Navigation.head_browse</i18n:text></h2> -->
 		
-		<xsl:apply-templates />
+		<!-- <xsl:apply-templates /> -->
 		
   		<div id="facet-panel-collapse" class="panel-group">
   			<div class="panel panel-default facet_limit blacklight-format ">
