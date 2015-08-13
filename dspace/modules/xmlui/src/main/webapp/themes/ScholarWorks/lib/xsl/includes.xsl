@@ -31,7 +31,7 @@
 	
 	<xsl:variable name="page" select="//variable/page" />
 	<xsl:variable name="base_url" select="//dri:meta/dri:pageMeta/dri:metadata[@element='contextPath']" />
-	<xsl:variable name="base_asset_url"><xsl:value-of select="$base_url" />/themes/Alchemy/lib</xsl:variable>
+	<xsl:variable name="base_asset_url"><xsl:value-of select="$base_url" />/themes/ScholarWorks/lib</xsl:variable>
 	<xsl:variable name="search_url">
 		<xsl:value-of select="$base_url" />
 		<xsl:value-of select="//dri:meta/dri:pageMeta/dri:metadata[@element='search' and @qualifier='simpleURL']" />
@@ -77,8 +77,10 @@
 		</title>
 		
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="{$base_asset_url}/css/alchemy.css" rel="stylesheet" />
+		<link href="{$base_asset_url}/css/blacklight.css" rel="stylesheet" />
 
 		<xsl:call-template name="local_css" />
 		
