@@ -283,7 +283,7 @@
       						<ul class="facet-values list-unstyled">
 								<xsl:for-each select="dri:item"> 
   									<li>here</li>
-  									<li><span class="facet-label"><a class="facet_select" href=""><i18n:text><xsl:value-of select="dri:xref/i18n:text" /></i18n:text></a></span></li>
+  									<li><span class="facet-label"><a class="facet_select" href=""><xsl:value-of select="dri:xref" /></a></span></li>
   								</xsl:for-each>
 							</ul>
     					</div>
