@@ -45,6 +45,22 @@
 		
 			<!-- bring the mets documents into the xml proper -->
 			
+			<!-- Discovery Facets -->
+	
+			<xsl:if test="//dri:list[@n='discovery']">
+	
+				<facets>
+					<xsl:for-each select="//dri:list[@n='discovery']/dri:list">
+						
+						<facet>
+							<xsl:value-of select="//dri:head/dri:value" />
+						</facet>
+									
+					</xsl:for-each>
+				</facets>
+				
+			</xsl:if>
+
 			<!-- communities -->
 	
 			<xsl:if test="//dri:referenceSet[@n='community-browser' or @n='community-view']/dri:reference">
