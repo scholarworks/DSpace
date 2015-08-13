@@ -272,6 +272,16 @@
 			<xsl:copy-of select="i18n:text" />
 		</xsl:for-each>
 
+		<xsl:for-each select="dri:options/dri:list[@n='discovery']/dri:list">
+  			<div id="facet-panel-collapse" class="panel-group">
+  				<div class="panel panel-default facet_limit blacklight-format ">
+  					<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
+    					<h5 class="panel-title facet-field-heading"><i18n:text><xsl:value-of select="dri:head/i18n:text" /></i18n:text></h5>
+	  				</div>
+  				</div>
+			</div>
+		</xsl:for-each>
+
   		<div id="facet-panel-collapse" class="panel-group">
   			<div class="panel panel-default facet_limit blacklight-format ">
   				<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
