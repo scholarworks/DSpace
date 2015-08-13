@@ -268,6 +268,10 @@
 		
 		<!-- <xsl:apply-templates /> -->
 		
+		<xsl:for-each select="variable/facets">
+			HERE 123
+		</xsl:for-each>
+
   		<div id="facet-panel-collapse" class="panel-group">
   			<div class="panel panel-default facet_limit blacklight-format ">
   				<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
