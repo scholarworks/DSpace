@@ -47,6 +47,7 @@
 			
 			<!-- Discovery Facets -->
 	
+			<!-- 
 			<xsl:if test="//dri:list[@n='discovery']">
 	
 				<facets>
@@ -60,7 +61,8 @@
 				</facets>
 				
 			</xsl:if>
-
+			-->
+			
 			<!-- communities -->
 	
 			<xsl:if test="//dri:referenceSet[@n='community-browser' or @n='community-view']/dri:reference">
