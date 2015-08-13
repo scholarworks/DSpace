@@ -269,7 +269,7 @@
 		<!-- <xsl:apply-templates /> -->
 		
 		<xsl:for-each select="variable/facets/facet">
-			HERE 123
+			<xsl:copy-of select="i18n:text" />
 		</xsl:for-each>
 
   		<div id="facet-panel-collapse" class="panel-group">
