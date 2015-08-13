@@ -47,21 +47,19 @@
 			
 			<!-- Discovery Facets -->
 	
-			<!-- 
-			<xsl:if test="//dri:list[@n='discovery']">
+			<xsl:if test="//dri:options/dri:list[@n='discovery']">
 	
 				<facets>
-					<xsl:for-each select="//dri:list[@n='discovery']/dri:list">
+					<xsl:for-each select="//dri:options/dri:list[@n='discovery']/dri:list">
 						
 						<facet>
-							<xsl:value-of select="//dri:head/dri:value" />
+							<xsl:value-of select="//dri:head/i18n:text" />
 						</facet>
 									
 					</xsl:for-each>
 				</facets>
 				
 			</xsl:if>
-			-->
 			
 			<!-- communities -->
 	
