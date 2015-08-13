@@ -275,12 +275,12 @@
 		</xsl:for-each>
 
 		<xsl:for-each select="dri:options/dri:list[@n='discovery']/dri:list">
-  			<div id="facet-panel-collapse" class="panel-group">
+  			<div id="facet-panel-collapse" class="collapse panel-group">
   				<div class="panel panel-default facet_limit blacklight-format ">
-  					<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
+  					<div class="collapsed collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-format">
     					<h5 class="panel-title facet-field-heading"><i18n:text><xsl:value-of select="dri:head/i18n:text" /></i18n:text></h5>
 	  				</div>
-	  				<div id="facet-format" class="panel-collapse facet-content">
+	  				<div id="facet-format" class="panel-collapse facet-content collapse">
     					<div class="panel-body">
       						<ul class="facet-values list-unstyled">
 								<xsl:for-each select="dri:item"> 
@@ -293,30 +293,6 @@
 				</div>
 			</div>
 		</xsl:for-each>
-
-  		<div id="facet-panel-collapse" class="panel-group">
-  			<div class="panel panel-default facet_limit blacklight-format ">
-  				<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-format">
-    				<h5 class="panel-title facet-field-heading">
-      					<a data-no-turbolink="true" href="#">Format</a>
-    				</h5>
-  				</div>
-  				<div id="facet-format" class="panel-collapse facet-content">
-    				<div class="panel-body">
-      					<ul class="facet-values list-unstyled">
-  							<li>
-  								<span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Book">Book</a></span>
-  								<span class="facet-count">9,737</span>
-  							</li>
-  							<li>
-  								<span class="facet-label"><a class="facet_select" href="/?f%5Bformat%5D%5B%5D=Unknown">Unknown</a></span>
-  								<span class="facet-count">88</span>
-  							</li>
-						</ul>
-    				</div>
-  				</div>
-			</div>
-		</div>
 		
 		<!-- 
 		<xsl:for-each select="//dri:options/dri:list[@n='browse']/dri:list[@n='global']">		
