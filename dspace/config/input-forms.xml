@@ -14,7 +14,7 @@
  <!-- the mapping for handle "default".                                    -->
 
  <form-map>
-   <name-map collection-handle="default" form-name="traditional" />
+   <name-map collection-handle="default" form-name="la_exhibit_140044" />
  </form-map>
 
 
@@ -240,7 +240,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
             <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>contributor</dc-element>
-                <dc-qualifier>other</dc-qualifier>
+                <dc-qualifier></dc-qualifier>
                     <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                 <label>Interviewer</label>
