@@ -237,7 +237,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <hint></hint>
                 <required></required>
 			</field>
-            <field>
+<!--            <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>contributor</dc-element>
                 <dc-qualifier></dc-qualifier>
@@ -248,6 +248,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <hint></hint>
                 <required></required>
 			</field>
+-->
              <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>date</dc-element>
@@ -511,8 +512,16 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <stored-value>Interviewee</stored-value>
             </pair>
             <pair>
+                <displayed-value>Interviewer</displayed-value>
+                <stored-value>Interviewer</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>Narrator</displayed-value>
                 <stored-value>Narrator</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Transcriptionist</displayed-value>
+                <stored-value>Transcriptionist</stored-value>
             </pair>
         </value-pairs>
 
