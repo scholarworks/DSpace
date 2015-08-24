@@ -241,7 +241,6 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <dc-schema>dc</dc-schema>
                 <dc-element>contributor</dc-element>
                 <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                 <label>Interviewer</label>
                 <input-type value-pairs-name="interviewer_types">qualdrop_value</input-type>
