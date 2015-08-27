@@ -229,25 +229,43 @@ it, please enter the types and the actual numbers or codes below.</hint>
             <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>contributor</dc-element>
-                <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-                    <repeatable>true</repeatable>
-                <label>Contributor</label>
-                <input-type value-pairs-name="contributor_types">qualdrop_value</input-type>
+                <dc-qualifier>Interviewer</dc-qualifier>
+                <repeatable>true</repeatable>
+                <label>Interviewer</label>
+                <input-type>onebox</input-type>
                 <hint></hint>
                 <required></required>
 			</field>
-<!--            <field>
+            <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>contributor</dc-element>
-                <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                <label>Interviewer</label>
-                <input-type value-pairs-name="interviewer_types">qualdrop_value</input-type>
+                <dc-qualifier>Narrator</dc-qualifier>
+                <repeatable>true</repeatable>
+                <label>Narrator</label>
+                <input-type>onebox</input-type>
                 <hint></hint>
                 <required></required>
 			</field>
--->
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>contributor</dc-element>
+                <dc-qualifier>Transcriptionist</dc-qualifier>
+                <repeatable>true</repeatable>
+                <label>Transcriptionist</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+                <required></required>
+			</field>
+            <field>
+                <dc-schema>dc</dc-schema>
+                <dc-element>contributor</dc-element>
+                <dc-qualifier>Interviewee</dc-qualifier>
+                <repeatable>true</repeatable>
+                <label>Interviewee</label>
+                <input-type>onebox</input-type>
+                <hint></hint>
+                <required></required>
+			</field>
              <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>date</dc-element>
@@ -276,6 +294,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
            <field>
                 <dc-schema>dc</dc-schema>
                 <dc-element>language</dc-element>
+                <repeatable>true</repeatable>
                 <label>Language</label>
                 <input-type value-pairs-name="la_ca_languages">dropdown</input-type>
                 <hint></hint>
@@ -284,6 +303,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <dc-schema>dc</dc-schema>
                 <dc-element>subject</dc-element>
                 <dc-qualifier></dc-qualifier>
+                <repeatable>true</repeatable>
                 <label>Subject Keywords</label>
                 <input-type value-pairs-name="la_ca_subjects">dropdown</input-type>
                 <hint> Select the appropriate subject keywords or phrases. </hint>
