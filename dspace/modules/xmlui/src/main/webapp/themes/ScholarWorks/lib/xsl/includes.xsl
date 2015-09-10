@@ -278,14 +278,13 @@
 			<xsl:variable name="facet" select="dri:head/i18n:text" />
   			<div id="facet-panel-collapse" class="collapse panel-group">
   				<div class="panel panel-default facet_limit blacklight-format ">
-  					<div class="collapse-toggle panel-heading" data-toggle="collapse" data-target="#facet-$facet">
+  					<div class="collapse-toggle panel-heading" data-toggle="" data-target="#facet-$facet">
     					<h5 class="panel-title facet-field-heading"><i18n:text><xsl:value-of select="dri:head/i18n:text" /></i18n:text></h5>
 	  				</div>
-	  				<div id="facet-format" class="panel-collapse facet-content collapse">
+	  				<div id="facet-format" class="panel-collapse facet-content">
     					<div class="panel-body">
       						<ul class="facet-values list-unstyled">
 								<xsl:for-each select="dri:item"> 
-  									<li>here</li>
   									<li><span class="facet-label"><a class="facet_select" href=""><xsl:value-of select="dri:xref" /></a></span></li>
   								</xsl:for-each>
 							</ul>
